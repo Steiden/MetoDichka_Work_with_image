@@ -1,0 +1,49 @@
+﻿<Window x:Class="MetoDichka_Work_with_image.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MetoDichka_Work_with_image"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/images/vibori.jpg"/>
+    </Window.Background>
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Width" Value="250"/>
+                <Setter Property="Height" Value="50"/>
+                <Setter Property="Margin" Value="0 10"/>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Background="#A0000000" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="image" Margin="30"/>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <Button x:Name="showAll_Button" Content="Все" Click="showAll_Button_Click"/>
+            <Button x:Name="loadImage_Button" Content="Загрузить" Click="loadImage_Button_Click"/>
+            <Button x:Name="saveImage_Button" Content="Сохранить" Click="saveImage_Button_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
