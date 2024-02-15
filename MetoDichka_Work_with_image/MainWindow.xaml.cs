@@ -10,7 +10,7 @@ using System.Windows.Media.Imaging;
 namespace MetoDichka_Work_with_image
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для MainWindow.xaml йцукен
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -61,6 +61,8 @@ namespace MetoDichka_Work_with_image
                 {
                     // Установка изображения в элемент Image
                     image.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+
+                    // Сохранение данных изображения
                     imageName = openFileDialog.SafeFileName;
                     imageSource = openFileDialog.FileName;
                 }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
+using System.Globalization;
+using System.Deployment.Internal;
+using System.Web;
 
 namespace MetoDichka_Work_with_image
 {
@@ -74,3 +77,4 @@ namespace MetoDichka_Work_with_image
         }
     }
 }
+//...
